@@ -1,7 +1,8 @@
 import "./global.css";
+import Grind from "./Grind";
 
 function App() {
-  return <>Hello, world!</>;
+  return <Grind />;
 }
 
 export default App;
