@@ -17,7 +17,7 @@ const AttachmentComponent: React.FC<{
 }> = ({ attachment, onDelete }) => {
   return (
     <span className={styles.attachment}>
-      <a href={attachment.link} className={styles.attachment__name}>
+      <a href={`/file/${attachment.id}`} className={styles.attachment__name}>
         {attachment.name}
       </a>
       <button className={styles.attachment__delete} onClick={onDelete}>
@@ -59,7 +59,6 @@ const SubmitComponent: React.FC<{
       type: "file",
       id,
       name: file.name,
-      link: "/",
     };
     await addAttachment(attachments, attachment);
     onUpdate();

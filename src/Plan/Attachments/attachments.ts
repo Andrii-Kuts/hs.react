@@ -2,7 +2,6 @@ export type Attachment = {
   id: string;
   type: "file";
   name: string;
-  link: string;
 };
 
 export type Attachments = {

@@ -1,0 +1,56 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.go_back_button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: var(--white);
+  text-decoration: none;
+  width: 200px;
+  padding: 14px 10px;
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.go_back_button:hover {
+  text-decoration: underline;
+}
+
+.file_viewer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.file_viewer__meta {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.file_viewer__meta__name {
+  font-size: 20px;
+}
+
+.file_viewer__meta__date {
+  color: var(--gray-light);
+  font-size: 14px;
+}
+
+.file_viewer__separator {
+  height: 1px;
+  background-color: var(--gray-dark);
+  width: 200px;
+  margin: 10px -2px;
+}
+
+.file_viewer__code {
+  margin-top: 0px;
+}

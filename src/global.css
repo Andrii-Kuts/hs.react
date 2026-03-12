@@ -2,6 +2,7 @@
   --black: #0e0e0e;
   --gray-dark: #252525;
   --gray: #424242;
+  --gray-light: #a8a8a8;
   --white: #ffffff;
   --accent1: #ff00ea;
   --red: #be2020;
@@ -11,6 +12,7 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-family: "Arial";
+  margin: 0;
 }
 
 .button {

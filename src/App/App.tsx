@@ -1,12 +1,15 @@
-import Plan from "../Plan";
-import styles from "./App.module.css";
+import { Route, Routes } from "react-router";
+import AppLayout from "../AppLayout";
+import MainPage from "../MainPage";
+import FileViewer from "../FileViewer";
 
 function App() {
   return (
-    <div className={styles.app}>
-      <h1 className={styles.title}>Project Domination</h1>
-      <Plan />
-    </div>
+    <Routes>
+      <Route Component={AppLayout} />
+      <Route path="/" Component={MainPage} />
+      <Route path="/file/:slug" Component={FileViewer} />
+    </Routes>
   );
 }
 
