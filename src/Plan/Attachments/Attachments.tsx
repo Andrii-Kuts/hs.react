@@ -10,6 +10,7 @@ import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import classNames from "classnames";
 import { deleteFile, uploadFile } from "../../FileViewer";
 import { X } from "lucide-react";
+import { Link } from "react-router";
 
 const AttachmentComponent: React.FC<{
   attachment: Attachment;
@@ -17,9 +18,9 @@ const AttachmentComponent: React.FC<{
 }> = ({ attachment, onDelete }) => {
   return (
     <span className={styles.attachment}>
-      <a href={`/file/${attachment.id}`} className={styles.attachment__name}>
+      <Link to={`/file/${attachment.id}`} className={styles.attachment__name}>
         {attachment.name}
-      </a>
+      </Link>
       <button className={styles.attachment__delete} onClick={onDelete}>
         <X size={16} style={{ display: "block" }} />
       </button>

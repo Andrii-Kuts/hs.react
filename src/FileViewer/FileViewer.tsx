@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import styles from "./FileViewer.module.css";
 import { getFileData, type FileData } from "./fileViewer";
 import Prism from "prismjs";
@@ -65,9 +65,9 @@ export const FileComponent: React.FC = () => {
 export const FileViewer: React.FC = () => {
   return (
     <div className={styles.page}>
-      <a href="/" className={styles.go_back_button}>
+      <Link to="/" className={styles.go_back_button}>
         <ChevronLeft /> Go Back
-      </a>
+      </Link>
       <FileComponent />
     </div>
   );
