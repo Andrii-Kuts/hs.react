@@ -16,6 +16,7 @@
 .plan_step__button__title {
   margin: 0;
   color: var(--white);
+  font-size: 32px;
 }
 
 .plan_step__button__chevron {
@@ -24,7 +25,7 @@
 }
 
 .plan_step__separator {
-  background-color: var(--accent1);
+  background-color: var(--gray-dark);
   height: 1px;
   width: 400px;
   margin: 4px 0px 4px 8px;
