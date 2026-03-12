@@ -1,0 +1,10 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  margin-bottom: 0;
+  font-size: 48px;
+}

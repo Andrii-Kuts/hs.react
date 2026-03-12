@@ -50,25 +50,25 @@ export const getPlanSteps: () => Promise<PlanStep[]> = async () => {
             },
           },
         ],
-        attachmentsContainer: {
-          attachments: [
-            {
-              type: "file",
-              name: "shoes.cpp",
-              link: "path/to/shoes.cpp",
-            },
-            {
-              type: "file",
-              name: "split.cpp",
-              link: "path/to/split.cpp",
-            },
-            {
-              type: "file",
-              name: "split-full.cpp",
-              link: "path/to/split-full.cpp",
-            },
-          ],
-        },
+      },
+      attachmentsContainer: {
+        attachments: [
+          {
+            type: "file",
+            name: "shoes.cpp",
+            link: "path/to/shoes.cpp",
+          },
+          {
+            type: "file",
+            name: "split.cpp",
+            link: "path/to/split.cpp",
+          },
+          {
+            type: "file",
+            name: "split-full.cpp",
+            link: "path/to/split-full.cpp",
+          },
+        ],
       },
     },
     {
@@ -76,7 +76,49 @@ export const getPlanSteps: () => Promise<PlanStep[]> = async () => {
       contest: {
         title: "IOI 2019 Day 2",
         link: "https://oj.uz/problems/source/ioi2019day2",
-        problems: [],
+        problems: [
+          {
+            name: "line",
+            title: "Broken Line",
+            link: "https://oj.uz/problem/view/IOI19_line",
+            isOptimization: true,
+            solvingStatus: {
+              points: 79.23,
+              submissions: 2,
+            },
+            upsolvingStatus: {
+              points: 100,
+              submissions: 2,
+            },
+          },
+          {
+            name: "vision",
+            title: "Vision Program",
+            link: "https://oj.uz/problem/view/IOI19_vision",
+            solvingStatus: {
+              points: 0,
+              submissions: 0,
+            },
+            upsolvingStatus: {
+              points: 30,
+              submissions: 1,
+            },
+          },
+          {
+            name: "walk",
+            title: "Sky Walking",
+            status: "upsolved",
+            link: "https://oj.uz/problem/view/IOI19_walk",
+            solvingStatus: {
+              points: 100,
+              submissions: 3,
+            },
+            upsolvingStatus: {
+              points: 100,
+              submissions: 4,
+            },
+          },
+        ],
       },
     },
     {

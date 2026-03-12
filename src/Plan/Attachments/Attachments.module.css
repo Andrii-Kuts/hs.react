@@ -1,0 +1,56 @@
+.attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 300px;
+}
+
+.attachments__container {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.attachment {
+  color: var(--accent1);
+  text-decoration: none;
+}
+
+.attachment:hover {
+  text-decoration: underline;
+}
+
+.attachments__submit {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.attachments__submit__file {
+  background-color: var(--gray-dark);
+  border-radius: 4px;
+  color: var(--white);
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.attachments__submit__button {
+  background-color: var(--gray-dark);
+  border: 2px solid var(--gray-dark);
+  border-radius: 4px;
+  color: var(--white);
+  padding: 2px 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.attachments__submit__button:hover {
+  border: 2px solid var(--gray);
+}
+
+.attachments__submit__button:active {
+  border: 2px solid var(--gray);
+  background-color: var(--gray);
+}

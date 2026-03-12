@@ -1,0 +1,13 @@
+:root {
+  --black: #0e0e0e;
+  --gray-dark: #252525;
+  --gray: #424242;
+  --white: #ffffff;
+  --accent1: #ff00ea;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Arial";
+}
