@@ -1,7 +1,7 @@
 .attachments {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   width: 300px;
 }
 
@@ -9,48 +9,56 @@
   display: flex;
   flex-flow: wrap;
   flex-direction: row;
-  gap: 6px;
+  gap: 4px;
 }
 
 .attachment {
+  display: inline-flex;
+}
+
+.attachment__name {
   color: var(--accent1);
   text-decoration: none;
 }
 
-.attachment:hover {
+.attachment__name:hover {
   text-decoration: underline;
+}
+
+.attachment__name:active {
+  color: var(--white);
+}
+
+.attachment__delete {
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--accent1);
+  padding: 0px;
+
+  cursor: pointer;
+}
+
+.attachment:hover .attachment__delete {
+  opacity: 0.5;
+}
+
+.attachment:hover .attachment__delete:hover {
+  opacity: 1;
+}
+
+.attachment__delete:active {
+  color: var(--white);
 }
 
 .attachments__submit {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 6px;
 }
 
 .attachments__submit__file {
-  background-color: var(--gray-dark);
-  border-radius: 4px;
-  color: var(--white);
-  padding: 4px 8px;
-  font-size: 14px;
-  cursor: pointer;
 }
 
 .attachments__submit__button {
-  background-color: var(--gray-dark);
-  border: 2px solid var(--gray-dark);
-  border-radius: 4px;
-  color: var(--white);
-  padding: 2px 6px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.attachments__submit__button:hover {
-  border: 2px solid var(--gray);
-}
-
-.attachments__submit__button:active {
-  border: 2px solid var(--gray);
-  background-color: var(--gray);
 }

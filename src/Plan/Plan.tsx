@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { type PlanStep } from "./types";
-import { getPlanSteps } from "./plans";
+import { getData, initializeTestData, type PlanStep } from "./plans";
 import styles from "./Plan.module.css";
 import ContestComponent from "./Contest";
-import Attachments from "./Attachments";
 import { ChevronDown } from "lucide-react";
+import AttachmentsComponent from "./Attachments";
 
 const PlanStep: React.FC<{
   planStep: PlanStep;
@@ -41,10 +40,8 @@ const PlanStep: React.FC<{
           <div className={styles.plan_step__separator} />
           <div className={styles.plan_step__content}>
             <ContestComponent contest={planStep.contest} />
-            {planStep.attachmentsContainer && (
-              <Attachments
-                attachmentsContainer={planStep.attachmentsContainer}
-              />
+            {planStep.attachments && (
+              <AttachmentsComponent attachments={planStep.attachments} />
             )}
           </div>
         </div>
@@ -55,13 +52,28 @@ const PlanStep: React.FC<{
 
 const Plan: React.FC = () => {
   const [planSteps, setPlanSteps] = useState<PlanStep[] | null>(null);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     async function fetch() {
-      setPlanSteps(await getPlanSteps());
+      await initializeTestData();
+      const data = await getData();
+      if (data == null) {
+        setError(true);
+        return;
+      }
+      setPlanSteps(data.planSteps);
     }
     fetch();
   }, []);
+
+  if (error) {
+    return (
+      <div>
+        <p style={{ color: "var(--red)" }}>Failed to fetch data</p>
+      </div>
+    );
+  }
 
   if (planSteps == null) {
     return (
@@ -74,7 +86,7 @@ const Plan: React.FC = () => {
   return (
     <div>
       {planSteps.map((planStep) => (
-        <PlanStep planStep={planStep} />
+        <PlanStep key={planStep.title} planStep={planStep} />
       ))}
     </div>
   );

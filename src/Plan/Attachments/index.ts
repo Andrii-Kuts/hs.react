@@ -1,2 +1,2 @@
-export * from "./types";
-export { default } from "./Attachments";
+export * from "./attachments.ts";
+export { default } from "./Attachments.tsx";

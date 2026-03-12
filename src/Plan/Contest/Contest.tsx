@@ -1,4 +1,4 @@
-import type { Contest, Problem, ProblemStatus } from "../types";
+import type { Contest, Problem, ProblemStatus } from "../plans";
 import styles from "./Contest.module.css";
 import classNames from "classnames";
 
