@@ -9,24 +9,35 @@ To keep all of his progress organized and documented, I've decided to create thi
 
 For every day there will be a tab where you can check what you have to do that day
 
-### Progress tracking
-
-Ability to view/update progress for every contest/problem. Will probably be implemented with a simple backend server
-
 ### Attachments
 
 Ability to attach files to contests/problems. Stuff like solution code or explanations
 
 ### Routing
 
-Separate pages for every day, that makes the most sense
+View attached files on a separate page. Uses c++ highlighting since that's what attachments will be used for the most
+
+### Placeholder Authentification
+
+Click "log in" in the top right to log in as a user
 
 ## Future Plans
 
-### Authentification
+### Progress tracking
 
-Sign-up and view your own progress
+Ability to view/update progress for every contest/problem. Ran out of time to implement this 🥲
+
+### Statistics
+
+View general statistics like total points, median result and so on
 
 ### Comments/Discussions
 
 Write your comments under each problem/contest for better progress documentation
+
+## Getting started
+
+1. Install all dependencies: `npm install`
+2. Create `.env` file by following `.env.template`
+3. Run with `npm run dev`
+4. Open the given link in your browser
