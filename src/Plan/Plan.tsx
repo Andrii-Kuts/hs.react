@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getData, initializeTestData, type PlanStep } from "./plans";
+import { getData, type PlanStep } from "./plans";
 import styles from "./Plan.module.css";
 import ContestComponent from "./Contest";
 import { ChevronDown } from "lucide-react";
@@ -56,7 +56,6 @@ const Plan: React.FC = () => {
 
   useEffect(() => {
     async function fetch() {
-      await initializeTestData();
       const data = await getData();
       if (data == null) {
         setError(true);

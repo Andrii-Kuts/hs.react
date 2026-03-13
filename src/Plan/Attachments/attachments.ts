@@ -53,9 +53,3 @@ export async function getAttachments(
     return null;
   }
 }
-
-export function createAttachments(): Attachments {
-  return {
-    id: crypto.randomUUID(),
-  };
-}
